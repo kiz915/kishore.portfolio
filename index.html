@@ -1,1 +1,846 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KISHORE — Portfolio</title>
+  <meta name="description" content="KISHORE — Aspiring Business Development & Tech Enthusiast. Python · Cloud · HTML/CSS · C++" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
+  <!-- ══════════════════════════════════════
+       PAGE LOADER
+  ══════════════════════════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-box">
+      <svg class="loader-k" width="52" height="52" viewBox="0 0 52 52" fill="none">
+        <path d="M4 4 L4 48 M4 26 L30 4 M4 26 L34 48" stroke="url(#lkg)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="lkg" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4f46e5"/>
+            <stop offset="100%" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="loader-progress"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="nav-wrap">
+      <a href="#hero" class="nav-logo" aria-label="Kishore Home">
+        <!-- Geometric K logo: two overlapping rectangles forming a K silhouette -->
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#0f0e17"/>
+          <!-- K shape -->
+          <rect x="10" y="9" width="4" height="18" fill="white" rx="1"/>
+          <path d="M14 18 L26 9" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M14 18 L26 27" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- accent dot -->
+          <circle cx="28" cy="9" r="2.5" fill="url(#lg1)"/>
+          <circle cx="28" cy="27" r="2.5" fill="url(#lg2)"/>
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#6366f1"/>
+              <stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#8b5cf6"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-word">KISHORE</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nl">About</a>
+        <a href="#skills" class="nl">Skills</a>
+        <a href="#projects" class="nl">Projects</a>
+        <a href="#achievements" class="nl">Certs</a>
+        <a href="#blog" class="nl">Blog</a>
+        <a href="#contact" class="nl">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="dark-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="db-track"><span class="db-thumb"></span></span>
+          <svg class="db-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="db-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="md-inner">
+      <a href="#about" class="md-link">About</a>
+      <a href="#skills" class="md-link">Skills</a>
+      <a href="#projects" class="md-link">Projects</a>
+      <a href="#achievements" class="md-link">Certifications</a>
+      <a href="#blog" class="md-link">Blog</a>
+      <a href="#contact" class="md-link">Contact</a>
+      <a href="#contact" class="btn-primary btn-sm md-cta">Hire Me</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════
+         HERO — Split screen: text left, visual right
+    ══════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <!-- Decorative background mesh -->
+      <div class="hero-mesh" aria-hidden="true">
+        <div class="mesh-orb mo1"></div>
+        <div class="mesh-orb mo2"></div>
+        <div class="mesh-orb mo3"></div>
+        <div class="mesh-grid"></div>
+      </div>
+
+      <div class="hero-inner">
+        <!-- LEFT -->
+        <div class="hero-left">
+          <div class="hero-badge animate-in" style="--d:0">
+            <span class="hb-dot"></span>
+            Available for Internships &amp; Opportunities
+          </div>
+
+          <h1 class="hero-h1 animate-in" style="--d:1">
+            <span class="h1-line">Hi, I'm</span>
+            <span class="h1-name">KISHORE</span>
+          </h1>
+
+          <div class="hero-role animate-in" style="--d:2">
+            <span class="role-static">I'm a&nbsp;</span>
+            <span class="role-typed" id="typedText"></span><span class="role-cursor">|</span>
+          </div>
+
+          <p class="hero-bio animate-in" style="--d:3">
+            Aspiring Business Development &amp; Tech Enthusiast based in Coimbatore.
+            I build things with Python, HTML/CSS, and Cloud Computing —
+            and I believe technology is best when it serves real human needs.
+          </p>
+
+          <div class="hero-chips animate-in" style="--d:4">
+            <span class="hchip">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Coimbatore, TN
+            </span>
+            <span class="hchip">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="2,7 12,13 22,7"/></svg>
+              kishorevk40@gmail.com
+            </span>
+            <span class="hchip">SKCET · IT · Batch 2025–28</span>
+          </div>
+
+          <div class="hero-btns animate-in" style="--d:5">
+            <a href="#projects" class="btn-primary">
+              View Projects
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
+            <a href="#" class="btn-ghost" id="dlResume">↓ Resume</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Card stack visual -->
+        <div class="hero-right animate-in" style="--d:3">
+          <div class="hcard-stack">
+            <!-- Main avatar card -->
+            <div class="hcard hcard-main">
+              <div class="hcard-avatar">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+                  <rect width="72" height="72" rx="20" fill="url(#avGrad)"/>
+                  <path d="M20 16H30V36.5L46 16H58L41 40L58.5 64H47L30 43V64H20V16Z" fill="white" opacity="0.95"/>
+                  <defs>
+                    <linearGradient id="avGrad" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stop-color="#4f46e5"/>
+                      <stop offset="45%" stop-color="#7c3aed"/>
+                      <stop offset="100%" stop-color="#a855f7"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="hcard-name">Kishore V</div>
+              <div class="hcard-title">IT Student · SKCET</div>
+              <div class="hcard-divider"></div>
+              <div class="hcard-socials">
+                <a href="https://github.com/kiz915" target="_blank" aria-label="GitHub" class="hcs">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kishore-v-a363433a9/" target="_blank" aria-label="LinkedIn" class="hcs">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/kishore_amv/" target="_blank" aria-label="Instagram" class="hcs">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                </a>
+              </div>
+            </div>
+            <!-- Floating stat cards -->
+            <div class="hcard hcard-stat s1">
+              <span class="hs-num" data-target="3">0</span>
+              <span class="hs-label">Certifications</span>
+            </div>
+            <div class="hcard hcard-stat s2">
+              <span class="hs-num" data-target="2">0</span>
+              <span class="hs-label">Projects</span>
+            </div>
+            <div class="hcard hcard-stat s3">
+              <span class="hs-num" data-target="8">0</span>
+              <span class="hs-label">Contributions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee ticker -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track" id="ticker">
+        <span>Python</span><span class="tk-sep">◆</span>
+        <span>HTML &amp; CSS</span><span class="tk-sep">◆</span>
+        <span>JavaScript</span><span class="tk-sep">◆</span>
+        <span>C++</span><span class="tk-sep">◆</span>
+        <span>AWS Cloud</span><span class="tk-sep">◆</span>
+        <span>Git &amp; GitHub</span><span class="tk-sep">◆</span>
+        <span>Firebase</span><span class="tk-sep">◆</span>
+        <span>Linux</span><span class="tk-sep">◆</span>
+        <span>Figma</span><span class="tk-sep">◆</span>
+        <span>Cloud Computing</span><span class="tk-sep">◆</span>
+        <span>Python</span><span class="tk-sep">◆</span>
+        <span>HTML &amp; CSS</span><span class="tk-sep">◆</span>
+        <span>JavaScript</span><span class="tk-sep">◆</span>
+        <span>C++</span><span class="tk-sep">◆</span>
+        <span>AWS Cloud</span><span class="tk-sep">◆</span>
+        <span>Git &amp; GitHub</span><span class="tk-sep">◆</span>
+        <span>Firebase</span><span class="tk-sep">◆</span>
+        <span>Linux</span><span class="tk-sep">◆</span>
+        <span>Figma</span><span class="tk-sep">◆</span>
+        <span>Cloud Computing</span><span class="tk-sep">◆</span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         ABOUT — Horizontal card + timeline
+    ══════════════════════════════════════ -->
+    <section class="section about-section" id="about">
+      <div class="section-wrap">
+        <div class="sec-eyebrow reveal">
+          <span class="sec-num">01</span>
+          <span class="sec-label">About Me</span>
+        </div>
+        <h2 class="sec-h2 reveal">The Story So Far</h2>
+
+        <div class="about-grid">
+          <div class="about-intro reveal">
+            <p class="about-lead">I'm <strong>Kishore V</strong>, a first-year IT student at Sri Krishna College of Engineering and Technology (SKCET), Coimbatore — where I'm building the technical foundation to one day stand at the intersection of business strategy and software.</p>
+            <p class="about-body">Beyond classrooms, I'm self-learning cloud platforms, building web projects, and earning certifications. When I step away from the screen, I create AMV (Anime Music Video) edits — because creativity and technology are two sides of the same coin for me.</p>
+            <blockquote class="about-quote">
+              <span>"Build relentlessly. Ship constantly. Learn from everything."</span>
+            </blockquote>
+            <div class="about-quick">
+              <div class="aq-row"><span class="aq-k">Roll No</span><span class="aq-v">25IT161</span></div>
+              <div class="aq-row"><span class="aq-k">Batch</span><span class="aq-v">2025–2028</span></div>
+              <div class="aq-row"><span class="aq-k">Department</span><span class="aq-v">Information Technology</span></div>
+              <div class="aq-row"><span class="aq-k">College</span><span class="aq-v">SKCET, Coimbatore</span></div>
+              <div class="aq-row"><span class="aq-k">Email</span><span class="aq-v"><a href="mailto:kishorevk40@gmail.com">kishorevk40@gmail.com</a></span></div>
+              <div class="aq-row"><span class="aq-k">WhatsApp</span><span class="aq-v"><a href="https://wa.me/916374372312">+91 63743 72312</a></span></div>
+            </div>
+          </div>
+
+          <div class="about-timeline">
+            <div class="tl-item reveal">
+              <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+              <div class="tl-line"></div>
+              <div class="tl-content">
+                <div class="tl-year">2025 — Present</div>
+                <div class="tl-title">B.Tech Information Technology</div>
+                <div class="tl-place">SKCET, Coimbatore</div>
+                <p class="tl-desc">Studying data structures, cloud fundamentals, web development, and software engineering. Active in tech clubs and self-driven learning.</p>
+                <div class="tl-tags"><span>Cloud</span><span>DSA</span><span>Web Dev</span></div>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-dot tl-dot-v"><div class="tl-dot-inner"></div></div>
+              <div class="tl-line"></div>
+              <div class="tl-content">
+                <div class="tl-year">2025</div>
+                <div class="tl-title">AWS Cloud Practitioner Certified</div>
+                <div class="tl-place">Amazon Web Services</div>
+                <p class="tl-desc">Completed AWS Essentials with 100% score — covering EC2, S3, IAM, pricing, and cloud architecture patterns.</p>
+                <div class="tl-tags"><span>AWS</span><span>Cloud</span><span>100%</span></div>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-dot tl-dot-v"><div class="tl-dot-inner"></div></div>
+              <div class="tl-line"></div>
+              <div class="tl-content">
+                <div class="tl-year">2025</div>
+                <div class="tl-title">Python Certified — Coursera</div>
+                <div class="tl-place">ID: N31A]T84N2CW</div>
+                <p class="tl-desc">Mastered Python syntax, data structures, functions, and algorithm fundamentals with 100% completion.</p>
+                <div class="tl-tags"><span>Python</span><span>Algorithms</span></div>
+              </div>
+            </div>
+            <div class="tl-item reveal">
+              <div class="tl-dot tl-dot-goal"><div class="tl-dot-inner"></div></div>
+              <div class="tl-content">
+                <div class="tl-year">3-Year Goal</div>
+                <div class="tl-title">Business Dev + Tech Leadership</div>
+                <div class="tl-place">The Big Picture</div>
+                <p class="tl-desc">I want to build and lead at the intersection of product strategy, cloud infrastructure, and meaningful technology.</p>
+                <div class="tl-tags"><span>Strategy</span><span>Leadership</span><span>Product</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SKILLS — Bento grid layout
+    ══════════════════════════════════════ -->
+    <section class="section skills-section" id="skills">
+      <div class="section-wrap">
+        <div class="sec-eyebrow reveal">
+          <span class="sec-num">02</span>
+          <span class="sec-label">Skills</span>
+        </div>
+        <h2 class="sec-h2 reveal">What I Work With</h2>
+        <p class="sec-sub reveal">A growing toolkit spanning programming, web, cloud, and creative tools.</p>
+
+        <div class="skills-bento">
+
+          <!-- Category card: Programming -->
+          <div class="bento-card bc-prog reveal">
+            <div class="bc-header">
+              <div class="bc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <span class="bc-cat">Programming</span>
+            </div>
+            <div class="skill-list">
+              <div class="sk-item">
+                <div class="sk-top"><span>Python</span><span class="sk-p">65%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="65"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>C++</span><span class="sk-p">45%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="45"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category card: Web -->
+          <div class="bento-card bc-web reveal">
+            <div class="bc-header">
+              <div class="bc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="bc-cat">Web Development</span>
+            </div>
+            <div class="skill-list">
+              <div class="sk-item">
+                <div class="sk-top"><span>HTML / CSS</span><span class="sk-p">70%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="70"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>JavaScript</span><span class="sk-p">50%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="50"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Firebase</span><span class="sk-p">35%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="35"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight stat card -->
+          <div class="bento-card bc-highlight reveal">
+            <div class="bh-big">5+</div>
+            <div class="bh-label">Technologies<br/>in Active Use</div>
+            <div class="bh-accent"></div>
+          </div>
+
+          <!-- Category card: Tools -->
+          <div class="bento-card bc-tools reveal">
+            <div class="bc-header">
+              <div class="bc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <span class="bc-cat">Tools &amp; DevOps</span>
+            </div>
+            <div class="skill-list">
+              <div class="sk-item">
+                <div class="sk-top"><span>VS Code</span><span class="sk-p">75%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="75"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Git / GitHub</span><span class="sk-p">55%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="55"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Linux</span><span class="sk-p">25%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="25"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Figma</span><span class="sk-p">30%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="30"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category card: Cloud -->
+          <div class="bento-card bc-cloud reveal">
+            <div class="bc-header">
+              <div class="bc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </div>
+              <span class="bc-cat">Cloud Computing</span>
+            </div>
+            <div class="skill-list">
+              <div class="sk-item">
+                <div class="sk-top"><span>AWS</span><span class="sk-p">40%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="40"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Cloud Concepts</span><span class="sk-p">50%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="50"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Google Cloud</span><span class="sk-p">30%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="30"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creative card -->
+          <div class="bento-card bc-creative reveal">
+            <div class="bc-header">
+              <div class="bc-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              </div>
+              <span class="bc-cat">Creative</span>
+            </div>
+            <div class="skill-list">
+              <div class="sk-item">
+                <div class="sk-top"><span>AMV Creation</span><span class="sk-p">60%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="60"></div></div>
+              </div>
+              <div class="sk-item">
+                <div class="sk-top"><span>Video Editing</span><span class="sk-p">55%</span></div>
+                <div class="sk-bar"><div class="sk-fill" data-w="55"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pill cloud -->
+        <div class="pill-cloud reveal">
+          <span class="pill">Python</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill active">HTML5</span>
+          <span class="pill">CSS3</span>
+          <span class="pill active">AWS</span>
+          <span class="pill">C++</span>
+          <span class="pill">Firebase</span>
+          <span class="pill active">Git</span>
+          <span class="pill">Linux</span>
+          <span class="pill">Figma</span>
+          <span class="pill">VS Code</span>
+          <span class="pill active">Cloud Computing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROJECTS — Staggered masonry feel
+    ══════════════════════════════════════ -->
+    <section class="section projects-section" id="projects">
+      <div class="section-wrap">
+        <div class="sec-eyebrow reveal">
+          <span class="sec-num">03</span>
+          <span class="sec-label">Projects</span>
+        </div>
+        <h2 class="sec-h2 reveal">Things I've Built</h2>
+        <p class="sec-sub reveal">Real projects, real intent — exploring web, APIs, and cloud concepts.</p>
+
+        <div class="projects-grid">
+
+          <div class="proj-card proj-featured reveal">
+            <div class="pc-top">
+              <div class="pc-tag">Featured ✦</div>
+              <div class="pc-num">01</div>
+            </div>
+            <div class="pc-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="pc-title">Personal Portfolio Website</h3>
+            <p class="pc-desc">Fully responsive portfolio with dark/light mode toggle, particle aurora background, page loader, typing animation, Firebase contact backend, scroll reveals, and micro-interactions.</p>
+            <div class="pc-stack">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Firebase</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/kiz915" target="_blank" class="pcl-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="pcl-fill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card reveal">
+            <div class="pc-top">
+              <div class="pc-tag">Web App</div>
+              <div class="pc-num">02</div>
+            </div>
+            <div class="pc-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+            </div>
+            <h3 class="pc-title">Weather App</h3>
+            <p class="pc-desc">Real-time weather via OpenWeather API. Dynamic backgrounds that change with weather conditions, location-based queries, and a clean minimal UI — all in vanilla JavaScript.</p>
+            <div class="pc-stack">
+              <span>JavaScript</span><span>REST API</span><span>CSS3</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/kiz915" target="_blank" class="pcl-outline">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="#" class="pcl-fill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card proj-coming reveal">
+            <div class="coming-center">
+              <div class="cc-emoji">🚀</div>
+              <div class="cc-title">Next Project</div>
+              <div class="cc-sub">Currently brewing something new. Stay tuned.</div>
+              <span class="cc-badge">Coming Soon</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         ACHIEVEMENTS / CERTIFICATIONS
+    ══════════════════════════════════════ -->
+    <section class="section achievements-section" id="achievements">
+      <div class="section-wrap">
+        <div class="sec-eyebrow reveal">
+          <span class="sec-num">04</span>
+          <span class="sec-label">Certifications</span>
+        </div>
+        <h2 class="sec-h2 reveal">Achievements</h2>
+        <p class="sec-sub reveal">Credentials earned through structured learning and certification platforms.</p>
+
+        <div class="achieve-grid">
+
+          <div class="ach-card reveal">
+            <div class="ach-top">
+              <div class="ach-provider-logo aws-logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.072.056.144.056.208 0 .088-.056.176-.176.264l-.583.384a.493.493 0 0 1-.232.08c-.088 0-.176-.04-.264-.12a2.73 2.73 0 0 1-.32-.416 6.89 6.89 0 0 1-.28-.528c-.704.832-1.584 1.248-2.64 1.248-.752 0-1.352-.216-1.784-.648-.432-.432-.656-1.008-.656-1.72 0-.76.272-1.376.824-1.832.552-.456 1.284-.688 2.208-.688.304 0 .616.024.944.072.328.048.664.12 1.016.208v-.648c0-.672-.144-1.144-.424-1.424-.288-.28-.776-.416-1.472-.416-.32 0-.648.04-.984.12-.336.08-.664.184-.984.32a2.63 2.63 0 0 1-.32.112.508.508 0 0 1-.128.024c-.112 0-.168-.08-.168-.248v-.392c0-.128.016-.224.056-.28a.568.568 0 0 1 .224-.168c.32-.168.704-.304 1.152-.416A5.63 5.63 0 0 1 3.7 5c1.112 0 1.928.256 2.456.768.52.512.784 1.288.784 2.336v3.08zm-3.64 1.36c.296 0 .6-.056.92-.168.32-.112.608-.312.848-.592.144-.176.256-.376.312-.6.056-.224.088-.496.088-.816v-.392a7.476 7.476 0 0 0-.816-.12 6.68 6.68 0 0 0-.84-.048c-.6 0-1.04.12-1.336.36-.296.24-.44.576-.44 1.016 0 .408.104.72.32.928.208.216.512.432.944.432zm7.2.936c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.312L8.16 5.7c-.048-.16-.072-.264-.072-.32 0-.128.064-.2.192-.2h.784c.152 0 .256.024.312.08.064.048.112.16.16.312l1.568 6.184 1.456-6.184c.04-.16.088-.264.152-.312A.572.572 0 0 1 12.96 5h.64c.152 0 .256.024.32.08.064.048.12.16.152.312l1.472 6.256 1.616-6.256c.048-.16.104-.264.16-.312.064-.048.168-.08.312-.08h.744c.128 0 .2.064.2.2 0 .04-.008.08-.016.128-.008.048-.024.104-.056.2l-2.256 6.24c-.048.16-.104.264-.168.312-.064.048-.168.08-.304.08h-.688c-.152 0-.256-.024-.32-.08-.064-.056-.12-.16-.152-.32l-1.448-6.016-1.44 6.008c-.04.16-.088.264-.152.32-.064.056-.176.08-.32.08h-.688zm12.048.256c-.416 0-.832-.048-1.232-.144-.4-.096-.712-.2-.92-.32-.128-.072-.216-.152-.248-.224a.56.56 0 0 1-.048-.224v-.408c0-.168.064-.248.184-.248.048 0 .096.008.144.024l.2.08c.272.12.568.216.88.28.32.064.632.096.952.096.504 0 .896-.088 1.168-.264a.86.86 0 0 0 .408-.752.78.78 0 0 0-.216-.56c-.144-.152-.416-.288-.808-.416l-1.16-.36c-.584-.184-1.016-.456-1.28-.816a1.956 1.956 0 0 1-.4-1.192c0-.344.072-.648.216-.912.144-.264.336-.496.584-.688.248-.2.528-.344.848-.448.32-.104.656-.152 1.008-.152.176 0 .36.008.536.032.184.024.352.056.512.096.152.04.296.08.432.128.136.048.24.096.312.144.104.064.184.128.232.2a.44.44 0 0 1 .072.256v.376c0 .168-.064.256-.184.256a.832.832 0 0 1-.304-.096 3.663 3.663 0 0 0-1.536-.312c-.456 0-.816.072-1.064.224-.248.152-.376.384-.376.704 0 .224.08.416.24.568.16.152.456.304.88.44l1.136.36c.576.184.992.44 1.24.776.248.336.368.72.368 1.144 0 .352-.072.672-.208.952-.144.28-.336.528-.592.728-.256.208-.56.36-.912.464a3.88 3.88 0 0 1-1.152.16z"/></svg>
+              </div>
+              <span class="ach-status done">✓ Done</span>
+            </div>
+            <div class="ach-provider">Amazon Web Services</div>
+            <h3 class="ach-title">AWS Certified Cloud Practitioner</h3>
+            <div class="ach-year">2025</div>
+            <div class="ach-bar-wrap">
+              <div class="ach-bar"><div class="ach-fill af-aws" data-w="100"></div></div>
+              <span>100%</span>
+            </div>
+          </div>
+
+          <div class="ach-card reveal">
+            <div class="ach-top">
+              <div class="ach-provider-logo coursera-logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M11.806 0C5.29 0 0 5.29 0 11.806c0 6.516 5.29 11.806 11.806 11.806 6.516 0 11.806-5.29 11.806-11.806C23.612 5.29 18.322 0 11.806 0zm0 2.17c5.32 0 9.636 4.316 9.636 9.636 0 5.32-4.316 9.636-9.636 9.636-5.32 0-9.636-4.316-9.636-9.636 0-5.32 4.316-9.636 9.636-9.636zm0 3.19a6.447 6.447 0 0 0-6.446 6.446 6.447 6.447 0 0 0 6.446 6.446 6.447 6.447 0 0 0 6.446-6.446 6.447 6.447 0 0 0-6.446-6.446z"/></svg>
+              </div>
+              <span class="ach-status done">✓ Done</span>
+            </div>
+            <div class="ach-provider">Coursera</div>
+            <h3 class="ach-title">Introduction to Python</h3>
+            <div class="ach-year">2025</div>
+            <div class="ach-bar-wrap">
+              <div class="ach-bar"><div class="ach-fill af-python" data-w="100"></div></div>
+              <span>100%</span>
+            </div>
+            <div class="ach-cred">Credential ID: <code>N31A]T84N2CW</code></div>
+          </div>
+
+          <div class="ach-card reveal">
+            <div class="ach-top">
+              <div class="ach-provider-logo gcp-logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+              </div>
+              <span class="ach-status prog">⏳ In Progress</span>
+            </div>
+            <div class="ach-provider">Google Cloud</div>
+            <h3 class="ach-title">Google Cloud Digital Leader</h3>
+            <div class="ach-year">2025 — Ongoing</div>
+            <div class="ach-bar-wrap">
+              <div class="ach-bar"><div class="ach-fill af-gcp" data-w="60"></div></div>
+              <span>60%</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         BLOG
+    ══════════════════════════════════════ -->
+    <section class="section blog-section" id="blog">
+      <div class="section-wrap">
+        <div class="sec-eyebrow reveal">
+          <span class="sec-num">05</span>
+          <span class="sec-label">Blog</span>
+        </div>
+        <h2 class="sec-h2 reveal">Thoughts &amp; Articles</h2>
+        <p class="sec-sub reveal">Notes on tech, cloud, business, and the journey of continuous learning.</p>
+
+        <div class="blog-grid">
+
+          <article class="blog-card blog-hero-card reveal">
+            <div class="blg-label">Featured · Cloud Computing</div>
+            <h3 class="blg-title">My Journey to AWS Cloud Practitioner Certification</h3>
+            <p class="blg-excerpt">How I approached studying for my first cloud certification as a first-year student — resources, timelines, key concepts, and the moment it all clicked.</p>
+            <div class="blg-foot">
+              <span class="blg-date">March 2025</span>
+              <span class="blg-read">5 min read</span>
+              <a href="#" class="blg-link">
+                Read →
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blg-label">Python</div>
+            <h3 class="blg-title">5 Python Concepts That Changed How I Think</h3>
+            <p class="blg-excerpt">List comprehensions, generators, decorators, context managers, and the elegance of Pythonic code — a beginner's reflection.</p>
+            <div class="blg-foot">
+              <span class="blg-date">Feb 2025</span>
+              <span class="blg-read">4 min read</span>
+              <a href="#" class="blg-link">Read →</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blg-label">Career</div>
+            <h3 class="blg-title">Why I'm Blending Business Dev &amp; Tech in My Career Path</h3>
+            <p class="blg-excerpt">The intersection of product strategy and software engineering — and why I believe this hybrid path is the future of impactful work.</p>
+            <div class="blg-foot">
+              <span class="blg-date">Jan 2025</span>
+              <span class="blg-read">3 min read</span>
+              <a href="#" class="blg-link">Read →</a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blg-label">Creativity</div>
+            <h3 class="blg-title">What AMV Editing Taught Me About Attention to Detail</h3>
+            <p class="blg-excerpt">The unexpected lessons from anime music video creation — timing, rhythm, visual storytelling — and how they apply to writing better code.</p>
+            <div class="blg-foot">
+              <span class="blg-date">Dec 2024</span>
+              <span class="blg-read">3 min read</span>
+              <a href="#" class="blg-link">Read →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CONTACT
+    ══════════════════════════════════════ -->
+    <section class="section contact-section" id="contact">
+      <div class="section-wrap">
+        <div class="sec-eyebrow reveal">
+          <span class="sec-num">06</span>
+          <span class="sec-label">Contact</span>
+        </div>
+        <h2 class="sec-h2 reveal">Let's Talk</h2>
+
+        <div class="contact-layout">
+          <div class="contact-left reveal">
+            <p class="contact-lead">Whether it's an internship, a project collaboration, or just a good conversation about tech and business — I'm always open to connecting.</p>
+            <div class="contact-links">
+              <a href="mailto:kishorevk40@gmail.com" class="cl-item">
+                <div class="cl-ico">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="2,7 12,13 22,7"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">Email</div>
+                  <div class="cl-val">kishorevk40@gmail.com</div>
+                </div>
+              </a>
+              <a href="tel:+916374372312" class="cl-item">
+                <div class="cl-ico">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 1.61 2.84 2 2 0 0 1 3.6.66h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.3a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">Phone</div>
+                  <div class="cl-val">+91 63743 72312</div>
+                </div>
+              </a>
+              <a href="https://wa.me/916374372312" target="_blank" class="cl-item">
+                <div class="cl-ico">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.515 5.86L.057 23.998l6.304-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.359-.214-3.738.98.997-3.648-.234-.374A9.818 9.818 0 0 1 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">WhatsApp</div>
+                  <div class="cl-val">+91 63743 72312</div>
+                </div>
+              </a>
+              <div class="cl-item">
+                <div class="cl-ico">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="cl-label">Location</div>
+                  <div class="cl-val">Coimbatore, Tamil Nadu, India</div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social-row">
+              <span class="csr-label">Connect on</span>
+              <div class="csr-links">
+                <a href="https://github.com/kiz915" target="_blank" class="csr-btn" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/kishore-v-a363433a9/" target="_blank" class="csr-btn" aria-label="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                <a href="https://www.instagram.com/kishore_amv/" target="_blank" class="csr-btn" aria-label="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-box reveal">
+            <div class="cfb-header">Send a Message</div>
+            <form id="contactForm" class="cform" novalidate>
+              <div class="cform-row">
+                <div class="cform-group">
+                  <label for="cf-fname">First Name</label>
+                  <input type="text" id="cf-fname" placeholder="Priya" required />
+                </div>
+                <div class="cform-group">
+                  <label for="cf-lname">Last Name</label>
+                  <input type="text" id="cf-lname" placeholder="Kumar" />
+                </div>
+              </div>
+              <div class="cform-group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" placeholder="you@example.com" required />
+              </div>
+              <div class="cform-group">
+                <label for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" placeholder="Internship / Collaboration / Hello" />
+              </div>
+              <div class="cform-group">
+                <label for="cf-msg">Message</label>
+                <textarea id="cf-msg" rows="5" placeholder="Tell me what's on your mind…" required></textarea>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <div class="cform-msg" id="cformMsg" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="Back to top">
+          <svg class="logo-mark" width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#0f0e17"/>
+            <rect x="10" y="9" width="4" height="18" fill="white" rx="1"/>
+            <path d="M14 18 L26 9" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M14 18 L26 27" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="28" cy="9" r="2.5" fill="#6366f1"/>
+            <circle cx="28" cy="27" r="2.5" fill="#8b5cf6"/>
+          </svg>
+          <span class="logo-word">KISHORE</span>
+        </a>
+        <p class="footer-sub">IT Student · Cloud Learner · Builder</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Certs</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://github.com/kiz915" target="_blank" aria-label="GitHub" class="fsoc">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kishore-v-a363433a9/" target="_blank" aria-label="LinkedIn" class="fsoc">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/kishore_amv/" target="_blank" aria-label="Instagram" class="fsoc">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://wa.me/916374372312" target="_blank" aria-label="WhatsApp" class="fsoc">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.515 5.86L.057 23.998l6.304-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.359-.214-3.738.98.997-3.648-.234-.374A9.818 9.818 0 0 1 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 KISHORE V · Roll No. 25IT161 · SKCET, Coimbatore</span>
+      <span>Built by <strong>KISHORE</strong> with ♥</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp FAB -->
+  <a href="https://wa.me/916374372312" target="_blank" class="wa-fab" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.549 4.122 1.515 5.86L.057 23.998l6.304-1.654A11.954 11.954 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.372l-.359-.214-3.738.98.997-3.648-.234-.374A9.818 9.818 0 0 1 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg>
+  </a>
+
+  <!-- Back to top -->
+  <button class="btt-btn" id="bttBtn" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
