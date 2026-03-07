@@ -88,7 +88,7 @@ document.querySelectorAll('.md-link, .md-cta').forEach(link => {
 const typedEl  = document.getElementById('typedText');
 const phrases  = [
   'Tech Enthusiast',
-  'Business Developer',
+  'Data Analyst',
   'Python Learner',
   'Cloud Explorer',
   'Web Builder',
